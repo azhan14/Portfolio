@@ -1,0 +1,64 @@
+.project-section {
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.project-wrapper {
+  width: 100%;
+  max-width: 900px; /* ✅ key change */
+  color: #ffffff;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  color: #00ffea;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  text-align: left;
+  padding: 1rem;
+  background: #111;
+  margin-bottom: 3rem;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00ffea;
+}
+
+.description {
+  margin: 1rem 0;
+  color: #999;
+}
+
+.github-links {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+      color: #00ffea;
+      font-size: 1.8rem;
+      transition: transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      mat-icon {
+        font-size: 2rem;
+      }
+  }
+}

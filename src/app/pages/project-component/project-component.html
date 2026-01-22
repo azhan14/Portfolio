@@ -1,0 +1,34 @@
+<section class="project-section">
+    <div class="project-wrapper">
+        <h2 class="section-title">Projects</h2>
+    
+        <div class="project-grid">
+            <mat-card *ngFor="let project of projects" class="project-card">
+                <mat-card-header>
+                    <mat-card-title>{{ project.title }}</mat-card-title>
+
+                    <div class="github-links">
+                        <button
+                            mat-icon-button
+                            *ngFor="let link of project.githubRepo"
+                            (click)="openLink(link)"
+                            aria-label="Github Link">
+                            <mat-icon svgIcon="github"></mat-icon>
+                        </button>
+                    </div>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <p class="description">{{ project.description }}</p>
+
+                    <mat-chip-set>
+                        <mat-chip *ngFor="let t of project.tech">
+                            {{ t }}
+                        </mat-chip>
+                    </mat-chip-set>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    
+</section>

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span class="logo" routerLink="/">Azhan's Portfolio</span>
+  <span class="spacer"></span>
+
+  <!-- Desktop Menu -->
+  <div class="desktop-menu">
+    <button mat-button routerLink="/">Home</button>
+    <button mat-button routerLink="/about">About</button>
+    <button mat-button routerLink="/projects">Projects</button>
+    <button mat-button routerLink="/contact">Contact</button>
+  </div>
+
+  <button mat-icon-button class="mobile-menu" (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>

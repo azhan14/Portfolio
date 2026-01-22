@@ -1,0 +1,36 @@
+mat-toolbar {
+  background: #2A7B9B;
+  background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  color: #00ffea;  /* primary text color */
+}
+
+.logo {
+  font-size: 1.5rem;
+  cursor: pointer;   /* makes it look clickable */
+  user-select: none; /* prevents text selection */
+}
+
+.spacer {
+  flex: 1;
+}
+
+.desktop-menu {
+  display: flex;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  @media (max-width: 768px) {
+    display: inline-flex;
+  }
+}
+
+/* Optional: style the buttons inside sidenav */
+.mobile-sidenav button {
+  width: 100%;
+  justify-content: flex-start;
+  color: #00ffea;
+}

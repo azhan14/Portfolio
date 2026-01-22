@@ -1,0 +1,86 @@
+.contact-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #ffffff;
+
+  h2 {
+    color: #00ffea;
+    margin-bottom: 2rem;
+  }
+
+  .contact-card {
+    border: 2px solid #00ffea;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: #111; /* optional dark background */
+    text-align: left;
+
+    @media(max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  .contact-details {
+    flex: 2;
+
+    p {
+      margin: 0.5rem 0;
+
+      a {
+        color: #00ffea;
+        text-decoration: none;
+
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+
+  .social-resume {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    @media(max-width: 768px) {
+      align-items: center;
+    }
+
+    .resume-download a button {
+      mat-icon {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+
+    a {
+        color: #00ffea;
+        font-size: 1.8rem;
+        transition: transform 0.2s;
+        display: inline-flex;
+        align-items: center;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        mat-icon {
+            font-size: 2rem;
+        }
+        }
+    }
+}

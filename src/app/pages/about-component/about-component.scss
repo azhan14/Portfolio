@@ -1,0 +1,102 @@
+.about-section {
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-wrapper {
+  width: 100%;
+  max-width: 900px; /* ✅ key change */
+  color: #ffffff;
+}
+
+h2 {
+  color: #00ffea;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  margin-bottom: 3rem;
+
+  p {
+    line-height: 1.6;
+    color: black;
+    text-align: justify;
+  }
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tech-card {
+  background: #111;
+  padding: 1.5rem;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 0.5rem;
+    color: #00ffea;
+  }
+
+  p {
+    color: #ccc;
+    font-size: 0.95rem;
+  }
+}
+
+.experience {
+  margin-bottom: 3rem;
+  gap: 1.5rem;
+}
+
+.experience-card {
+  background: #111;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  h3 {
+    margin-bottom: 0.2rem;
+    color: #00ffea;
+  }
+
+  .company {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #999;
+  }
+
+  p {
+    margin-top: 0.8rem;
+    color: #ccc;
+  }
+}
+
+.skills {
+  .skill {
+    margin-bottom: 1.5rem;
+
+    span {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: #00ffea;
+    }
+
+    small {
+      display: block;
+      margin-top: 0.3rem;
+      color: #aaa;
+    }
+  }
+}
+
+/* Progress bar height */
+mat-progress-bar {
+  height: 8px;
+  border-radius: 4px;
+}

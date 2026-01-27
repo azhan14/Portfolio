@@ -20,17 +20,17 @@ export class App {
 
     this.matIconRegistry.addSvgIcon(
       'github',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/github.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/github.svg')
     );
 
     this.matIconRegistry.addSvgIcon(
       'linkedin',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/linkedin.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/linkedin.svg')
     );  
 
     this.matIconRegistry.addSvgIcon(
       'email',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/envelope.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/envelope.svg')
     );
   }
 }

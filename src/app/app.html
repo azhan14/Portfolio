@@ -11,7 +11,7 @@
   </mat-sidenav>
 
   <!-- Main Content -->
-  <mat-sidenav-content>
+  <mat-sidenav-content *ngIf="iconRegistered">
     <app-navbar [sidenav]="sidenav"></app-navbar>
 
     <main class="page">

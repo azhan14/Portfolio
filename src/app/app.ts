@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, DOCUMENT, Inject, OnInit, signal } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./layout/navbar-component/navbar-component";
 import { FooterComponent } from "./layout/footer-component/footer-component";
@@ -18,23 +18,26 @@ export class App implements OnInit {
   protected readonly title = signal('azhan-portfolio');
   iconRegistered = false;
 
-  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {}
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, @Inject(DOCUMENT) private document: Document) {}
   
   
   ngOnInit(): void {
+
+    const baseUrl = this.document.baseURI;
+
     this.matIconRegistry.addSvgIcon(
       'github',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/github.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`${baseUrl}assets/github.svg`)
     );
 
     this.matIconRegistry.addSvgIcon(
       'linkedin',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/linkedin.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`${baseUrl}assets/linkedin.svg`)
     );  
 
     this.matIconRegistry.addSvgIcon(
       'email',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/envelope.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`${baseUrl}assets/envelope.svg`)
     );
 
     this.iconRegistered = true;
